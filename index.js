@@ -5,8 +5,12 @@ function Header() {
     return(
         <header>
             <nav>
-                <img src='react_logo.png' id="logo" width="40" />
-                <h1>{title}</h1>
+                <img src='react_logo.png' />
+                <ul className="nav-menu">
+                    <li>Pricing</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
             </nav>
         </header>
     )
@@ -15,7 +19,8 @@ function Header() {
 /// This segment has the main portion of the page
 function MainContent() {
     return(
-        <div>
+        <div className="main-content">
+            <h1>{title}</h1>
             <ul>
                 <li>Was first released in 2013</li>
                 <li>Was originall created by Jordan Walke</li>
