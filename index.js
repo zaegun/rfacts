@@ -1,5 +1,6 @@
 const title = "Fun facts about React"
 
+/// This segment has the header information for the page
 function Header() {
     return(
         <header>
@@ -11,6 +12,7 @@ function Header() {
     )
 }
 
+/// This segment has the main portion of the page
 function MainContent() {
     return(
         <div>
@@ -25,6 +27,7 @@ function MainContent() {
     )
 }
 
+/// This segment houses the footer and legal information
 function Footer() {
     return(
         <footer>
@@ -33,11 +36,17 @@ function Footer() {
     )
 }
 
+/// Creates the page content
+function Page() {
+    return(
+        <div>
+            <Header />
+            <MainContent />
+            <Footer />
+        </div>
+    )
+}
+
+/// Get the right element and render the content
 const root = document.getElementById("root");
-ReactDOM.createRoot(root).render(
-    <div>
-        <Header />
-        <MainContent />
-        <Footer />
-    </div>
-    );
+ReactDOM.createRoot(root).render(<Page />);
